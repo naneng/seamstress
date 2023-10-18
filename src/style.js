@@ -5,6 +5,10 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'PT Root';
     src: url("./assets/ptroot.woff2") format('woff2');
   } */
+  * {
+	margin: 0;
+	padding: 0;
+}
 
   body {
     font-family: 'Roboto Mono', monospace;
@@ -16,13 +20,15 @@ export const GlobalStyle = createGlobalStyle`
 
   header {
     position: fixed;
-    top: 8px;
+    top: 5px;
     left: 0;
     width: 100%;
     overflow: hidden;
     font-size: 16px;
-    font-variation-settings: "wght" 800;
-    z-index: 1000000000001;
+    /* font-variation-settings: "wght" 800; */
+    z-index: 200000;
+    margin: 8px 0 0 0;
+    padding: 0 0 0 10px;
   }
 
   header h1,
@@ -35,7 +41,6 @@ export const GlobalStyle = createGlobalStyle`
     width: 150px;
     flex: 0 0 auto;
     display: inline-block;
-    padding: 0 0 0 10px;
     font-size: 14px;
   }
 

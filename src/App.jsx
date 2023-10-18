@@ -59,7 +59,7 @@ function App() {
 
     slides.forEach(slide => {
       let current = 0;
-      let z = 1000000000;
+      let z = 200000;
 
       const images = slide.querySelectorAll('img');
 
@@ -131,7 +131,6 @@ function App() {
 
 
   }, []);
-
 
 
 
