@@ -78,6 +78,10 @@ export const GlobalStyle = createGlobalStyle`
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
   }
 
+  section div.slides img:hover {
+    cursor: pointer;
+  }
+
   section div.info {
     padding: 32px;
     max-width: 480px;
@@ -111,9 +115,10 @@ export const GlobalStyle = createGlobalStyle`
     transition: width 0.25s;
   }
 
-  section a:hover img {
+section a:hover img {
     width: 25px;
-  }
+}
+
 
   section.alternative div.split:first-child {
     grid-column: 2;
