@@ -1,13 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: PT Root;
-    src: url("./assets/ptroot.woff2");
-  }
+  /* @font-face {
+    font-family: 'PT Root';
+    src: url("./assets/ptroot.woff2") format('woff2');
+  } */
 
   body {
-    font-family: PT Root;
+    font-family: 'Roboto Mono', monospace;
     font-size: 24px;
     line-height: 1.5;
     background-color: #000000;
@@ -35,6 +35,8 @@ export const GlobalStyle = createGlobalStyle`
     width: 150px;
     flex: 0 0 auto;
     display: inline-block;
+    padding: 0 0 0 10px;
+    font-size: 14px;
   }
 
   h2 span {
@@ -53,6 +55,7 @@ export const GlobalStyle = createGlobalStyle`
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    /* font-family: PT Root; */
   }
 
   section div.split:first-child {

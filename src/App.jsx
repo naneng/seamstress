@@ -1,12 +1,14 @@
-import React from 'react';
-import sunnies1 from './assets/sweaters-1.jpg';
-import sunnies1x2 from './assets/sweaters-1-2x.jpg';
-import sunnies2 from './assets/sweaters-2.jpg';
-import sunnies2x2 from './assets/sweaters-2-2x.jpg';
-import sunnies3 from './assets/sweaters-3.jpg';
-import sunnies3x2 from './assets/sweaters-3-2x.jpg';
-import sunnies4 from './assets/sweaters-4.jpg';
-import sunnies4x2 from './assets/sweaters-4-2x.jpg';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import imagesLoaded from 'imagesloaded';
+import sunnies1 from './assets/sunglasses-1.jpg';
+import sunnies1x2 from './assets/sunglasses-1-2x.jpg';
+import sunnies2 from './assets/sunglasses-2.jpg';
+import sunnies2x2 from './assets/sunglasses-2-2x.jpg';
+import sunnies3 from './assets/sunglasses-3.jpg';
+import sunnies3x2 from './assets/sunglasses-3-2x.jpg';
+import sunnies4 from './assets/sunglasses-4.jpg';
+import sunnies4x2 from './assets/sunglasses-4-2x.jpg';
 import sweaters1 from './assets/sweaters-1.jpg';
 import sweaters1x2 from './assets/sweaters-1-2x.jpg';
 import sweaters2 from './assets/sweaters-2.jpg';
@@ -15,13 +17,129 @@ import sweaters3 from './assets/sweaters-3.jpg';
 import sweaters3x2 from './assets/sweaters-3-2x.jpg';
 import sweaters4 from './assets/sweaters-4.jpg';
 import sweaters4x2 from './assets/sweaters-4-2x.jpg';
+import arrow from './assets/arrow.svg';
 import { GlobalStyle } from './style.js';
 
 function App() {
+
+  //header animations
+  const carouselsRef = useRef(null);
+
+
+  useEffect(() => {
+    const carousels = carouselsRef.current.querySelectorAll("header h1, header h2");
+    
+
+    const fadeInTimeline = gsap.timeline();
+
+    fadeInTimeline
+      .set(carousels, { opacity: 0 })
+      .to(carousels, { opacity: 1, delay: 1, stagger: 1, duration: 3 });
+
+    carousels.forEach(carousel => {
+      const spanTag = carousel.querySelector("span");
+      const spanWidth = spanTag.clientWidth;
+
+      for (let i = 0; i < 20; i = i + 1) {
+        carousel.appendChild(spanTag.cloneNode(true));
+      }
+
+      const movementTimeline = gsap.timeline({
+        repeat: -1
+      });
+
+      movementTimeline
+        .set(carousel, { x: 0 })
+        .to(carousel, { x: spanWidth * -1, duration: 6, ease: "linear" });
+    });
+
+
+    //slides animations
+    const slides = document.querySelectorAll('section div.slides');
+
+    slides.forEach(slide => {
+      let current = 0;
+      let z = 1000000000;
+
+      const images = slide.querySelectorAll('img');
+
+      images.forEach(image => {
+        z = z - 1;
+        image.style.zIndex = z;
+      });
+
+      gsap.set(images, { opacity: 0 });
+
+      imagesLoaded(images, function () {
+        const timeline = gsap.timeline();
+
+        timeline
+          .set(images, {
+            x: () => {
+              return 500 * Math.random() - 250;
+            },
+            y: "500%",
+            rotation: () => {
+              return 90 * Math.random() - 45;
+            },
+            opacity: 1
+          })
+          .to(images, { x: 0, y: 0, stagger: -0.25 })
+          .to(images, {
+            rotation: () => {
+              return 16 * Math.random() - 8;
+            }
+          });
+      });
+
+      slide.addEventListener('click', function() {
+        z = z - 1;
+
+        let direction = "150%";
+        let midAngle = 15;
+
+        if (Math.random() > 0.5) {
+          direction = "-150%";
+          midAngle = -15;
+        }
+
+        const currentImage = images[current];
+        const flipTimeline = gsap.timeline();
+
+        flipTimeline
+          .set(currentImage, { x: 0 })
+          .to(currentImage, {
+            x: direction,
+            rotation: midAngle,
+            rotationY: 90,
+            scale: 1.1
+          })
+          .set(currentImage, { zIndex: z })
+          .to(currentImage, {
+            x: 0,
+            rotation: () => {
+              return 16 * Math.random() - 8;
+            },
+            rotationY: 0,
+            scale: 1
+          });
+
+        current = current + 1;
+        current = current % images.length;
+      });
+    });
+
+
+  }, []);
+
+
+
+
+
   return (
     <>
       <GlobalStyle />
-      <header>
+      <header ref={carouselsRef}>
         <h1>
           <span>Seamstress</span>
         </h1>
@@ -51,7 +169,7 @@ function App() {
             <p>
               <a href="#">
                 Read more
-                <img src="arrow.svg" alt="Read more" />
+                <img src={arrow} alt="Read more" />
               </a>
             </p>
           </div>
@@ -79,7 +197,7 @@ function App() {
             <p>
               <a href="#">
                 Read more
-                <img src="arrow.svg" alt="Read more" />
+                <img src={arrow} alt="Read more" />
               </a>
             </p>
           </div>
