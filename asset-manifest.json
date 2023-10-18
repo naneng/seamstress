@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/seamstress/static/css/main.31d6cfe0.css",
+    "main.js": "/seamstress/static/js/main.b0316520.js",
+    "static/js/787.41d7925b.chunk.js": "/seamstress/static/js/787.41d7925b.chunk.js",
+    "static/media/sunglasses-4-2x.jpg": "/seamstress/static/media/sunglasses-4-2x.3397f33911d0913c3f74.jpg",
+    "static/media/sweaters-4-2x.jpg": "/seamstress/static/media/sweaters-4-2x.602443b253faffad0565.jpg",
+    "static/media/sunglasses-1-2x.jpg": "/seamstress/static/media/sunglasses-1-2x.40e93111bb99d6fa5fca.jpg",
+    "static/media/sunglasses-2-2x.jpg": "/seamstress/static/media/sunglasses-2-2x.783be71c7f53f3ec7438.jpg",
+    "static/media/sunglasses-3-2x.jpg": "/seamstress/static/media/sunglasses-3-2x.929debe9c1400dc0c188.jpg",
+    "static/media/sweaters-1-2x.jpg": "/seamstress/static/media/sweaters-1-2x.5346f89c9deec79efe0d.jpg",
+    "static/media/sweaters-3-2x.jpg": "/seamstress/static/media/sweaters-3-2x.15f86759c125827508fe.jpg",
+    "static/media/sweaters-2-2x.jpg": "/seamstress/static/media/sweaters-2-2x.405b51513305a621a7ce.jpg",
+    "static/media/sunglasses-2.jpg": "/seamstress/static/media/sunglasses-2.b1c305bb97f135482f93.jpg",
+    "static/media/sunglasses-1.jpg": "/seamstress/static/media/sunglasses-1.13b13fbd209b60418ace.jpg",
+    "static/media/sunglasses-4.jpg": "/seamstress/static/media/sunglasses-4.74796a596ca7cbc218dc.jpg",
+    "static/media/sunglasses-3.jpg": "/seamstress/static/media/sunglasses-3.e19f42eee02b86d6474d.jpg",
+    "static/media/sweaters-1.jpg": "/seamstress/static/media/sweaters-1.480733a00929520089d8.jpg",
+    "static/media/sweaters-4.jpg": "/seamstress/static/media/sweaters-4.4516414b8a96ec7063ee.jpg",
+    "static/media/sweaters-3.jpg": "/seamstress/static/media/sweaters-3.972e20e50111b5ac58f0.jpg",
+    "static/media/sweaters-2.jpg": "/seamstress/static/media/sweaters-2.85b3c24171e3cea7befc.jpg",
+    "index.html": "/seamstress/index.html",
+    "static/media/arrow.svg": "/seamstress/static/media/arrow.0a6b1ee2b7adb8aa0370ea13310f66eb.svg",
+    "main.b0316520.js.map": "/seamstress/static/js/main.b0316520.js.map",
+    "787.41d7925b.chunk.js.map": "/seamstress/static/js/787.41d7925b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.b0316520.js"
+  ]
+}
