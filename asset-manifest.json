@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/seamstress/static/css/main.31d6cfe0.css",
-    "main.js": "/seamstress/static/js/main.b0316520.js",
+    "main.js": "/seamstress/static/js/main.073b201e.js",
     "static/js/787.41d7925b.chunk.js": "/seamstress/static/js/787.41d7925b.chunk.js",
     "static/media/sunglasses-4-2x.jpg": "/seamstress/static/media/sunglasses-4-2x.3397f33911d0913c3f74.jpg",
     "static/media/sweaters-4-2x.jpg": "/seamstress/static/media/sweaters-4-2x.602443b253faffad0565.jpg",
@@ -21,11 +21,11 @@
     "static/media/sweaters-2.jpg": "/seamstress/static/media/sweaters-2.85b3c24171e3cea7befc.jpg",
     "index.html": "/seamstress/index.html",
     "static/media/arrow.svg": "/seamstress/static/media/arrow.0a6b1ee2b7adb8aa0370ea13310f66eb.svg",
-    "main.b0316520.js.map": "/seamstress/static/js/main.b0316520.js.map",
+    "main.073b201e.js.map": "/seamstress/static/js/main.073b201e.js.map",
     "787.41d7925b.chunk.js.map": "/seamstress/static/js/787.41d7925b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.b0316520.js"
+    "static/js/main.073b201e.js"
   ]
 }
